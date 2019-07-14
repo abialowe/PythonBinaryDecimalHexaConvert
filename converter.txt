@@ -1,0 +1,55 @@
+ans=True
+while ans:
+    print("""
+    1.Decimal to Binary Conversion
+    2.Binary to Decimal Conversion
+    3.Decimal to Hexadecimal Conversion
+    4.Exit/Quit
+    """)
+    ans=input("Select desired conversion: ")
+    
+    if ans=="1": #converting decimal to binary
+        print("\n Decimal to Binary Conversion selected.") 
+        n = input("Please enter a dec number:")
+        b = ''
+        if n > 0:
+            b =(n % 2) + b
+            n >>= 1
+            print ("Binary ="),b
+        else:
+            print("Please enter a valid integer.") 
+        
+    elif ans=="2":
+      print("\n Binary to Decimal Conversion selected.")
+
+    elif ans=="3":
+      print("\n Decimal to Hexadecimal Conversion selected.")
+      def decToHex(n): 
+        number = int (input(“Please enter a positive number”))
+         while(number<0):
+             print(“Enter a positive number, please.”)
+         if(number==0):
+            print(“The hexadecimal value of 0 equals 0.”)
+         else
+            hStr=” “
+        quotient= number
+        while(q>0): #check if remainder is less than 10
+            if(quotient%16<10):
+                hStr= Str(q%16) + hStr
+            elif(quotient%16==10):
+                hStr= “A” + hStr
+            elif(quotient%16==11):
+                hStr= “B” + hStr                
+            else:
+                hStr = “F” + hStr
+        q = q//16 #prints out conversion into hexadecimal
+        print (number, “converted to hexadecimal is “, hStr)
+
+    
+
+    elif ans=="4":
+      print("\n Goodbye") 
+      ans = None
+
+    else:
+       print("\n Not Valid Choice, Try again")
